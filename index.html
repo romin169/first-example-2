@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Slider HTML CSS only</title>
+
+
+    <style>
+        .hwrap {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            background-color: #eee;
+        }
+
+        .hmove {
+            display: flex;
+            position: relative;
+            top: 0;
+            right: 0;
+        }
+
+        .hslide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+
+        @keyframes slideh {
+            0% {
+                right: 0%;
+            }
+
+            30% {
+                right: 0%;
+            }
+
+            33% {
+                right: 100%;
+            }
+
+            63% {
+                right: 100%;
+            }
+
+            66% {
+                right: 200%;
+            }
+
+            97% {
+                right: 200%;
+            }
+
+            100% {
+                right: 0%;
+            }
+        }
+
+        .hmove {
+            animation: slideh linear 10s infinite;
+        }
+
+        .hmove:hover {
+            animation-play-state: paused;
+        }
+
+
+        a.slide__prev,
+        .slider::before {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+            left: 5%;
+            background-color: #000000;
+        }
+
+        a.slide__next,
+        .slider::after {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            right: 5%;
+            background-color: #000000;
+        }
+
+        /* .slide a {
+            background: none;
+            border: none;
+        } */
+
+        .slide__prev,
+        .slide__next {
+            position: absolute;
+            /* left: 48%; */
+            width: 35px;
+            height: 35px;
+            border: solid black;
+            border-width: 0 4px 4px 0;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+
+
+        .slider {
+            height: 400px;
+            margin: 20px;
+            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        /* ----------     Explore   */
+    </style>
+
+
+</head>
+
+
+<body>
+    <section>
+        <div class="hwrap slider">
+            <div class="hmove slides">
+                <div class="hslide slide" id="slides__1">
+                    <p class="slide__text">
+                        “I would like to thank you for your expertise in the sale of our investment property. We
+                        really appreciated the fact that you took the time to take buyers through that couldnt make
+                        the open inspections and informed us thoroughly throughout the entire Auction process. It
+                        was an exciting experience and would highly recommend Teena and Gabby to any prospective
+                        Vendor.”
+                        <a class="slide__prev" href="#slides__3" title="Prev"></a>
+                    <a class="slide__next" href="#slides__1" title="Next"></a>
+                    </p>
+                    <h1>Harshad Patel</h1>
+                    
+                </div>
+
+                <div class="hslide" id="slides__2">
+                    <p class="slide__text">
+                        “I purchased through Teena and Gabby and found their level of service to be above and beyond
+                        and I would highly recommend them to any future purchasers if they require a great level of
+                        service.”
+                        <a class="slide__prev" href="#slides__1" title="Prev"></a>
+                        <a class="slide__next" href="#slides__3" title="Next"></a>
+                        “I purchased through Teena and Gabby and found their level of service to be above and beyond
+                        and I would highly recommend them to any future purchasers if they require a great level of
+                        service.”
+                    </p>
+                    <h1>Kalpesh Patel</h1>
+                    
+                </div>
+
+                <div class="hslide" id="slides__3">
+                    <p class="slide__text">
+                        "There are no words to express my huge gratitude you to you and to Teena for the advice you
+                        provided and for being so accommodating and responsive to all the requests regarding the
+                        properties I viewed and particularly the property I bought. I appreciate the timeliness and
+                        the detail of replies to the queries, the tips on how to get the best deal, and the
+                        suggestions on how to turn a house into home. I was very nervous buying my first home, and
+                        you helped to make this journey seamless and exciting"
+                    </p>
+                    <h1>Ramesh Patel</h1>
+                    <a class="slide__prev" href="#slides__2" title="Prev"></a>
+                    <a class="slide__next" href="#slides__1" title="Next"></a>
+                </div>
+            </div>
+    </section>
+</body>
+
+</html>
